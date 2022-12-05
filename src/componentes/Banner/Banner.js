@@ -1,6 +1,6 @@
 import './Banner.css'
 
-function Banner () {
+export const Banner = () => {
     // JSX
     return (
             //no react usamos calssName e não class
@@ -9,6 +9,4 @@ function Banner () {
         </header>
         
     )
-}
-
-export default Banner
+};
