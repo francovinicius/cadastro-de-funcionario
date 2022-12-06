@@ -5,15 +5,14 @@ import './Formulario.css'
 const Formulario = () => {
 
     const times = [
-            'Gerentes',
-            'Programadores',
+            'Gerente',
+            'Programador',
             'Líder de equipe',
             'Auxiliar administrativo',
             'Auxiliar de serviços gerais',
             'Assistente de rastreamento',
-            'Motoristas'
+            'Motorista'
     ]
-
 
     return (
         <section className='formulario'>
@@ -23,9 +22,9 @@ const Formulario = () => {
             <form>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
                 <CampoTexto label="Nome" placeholder = "Digite o nome"/>
-                <CampoTexto label="Cargo" placeholder = "Digite o cargo"/>
+                <CampoTexto label="Empresa" placeholder = "Digite a empresa contratante"/>
                 <CampoTexto label="Imagem" placeholder = "Digite o endereço da imagem"/>
-                <ListaSuspensa itens={times} />
+                <ListaSuspensa label="Cargos" itens={times} placeholder = "Selecione um cargo" />
             </form>
         </section>
     )
