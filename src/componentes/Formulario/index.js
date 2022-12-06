@@ -4,7 +4,7 @@ import ListaSuspensa from '../ListaSuspensa';
 import { useState } from 'react';
 import './Formulario.css'
 
-const Formulario = () => {
+const Formulario = (props) => {
     //array time
     const times = [
             'Selecione o cargo',
@@ -28,7 +28,12 @@ const Formulario = () => {
     const aoSalvar = (evento) => {
 
         evento.preventDefault ()
-        console.log('Form subimetido a => ', nome, empresa, imagem, time)
+        props.aoColaboradorCadastrado({
+            nome,
+            empresa,
+            imagem,
+            time
+        })
     }
 
     return (
