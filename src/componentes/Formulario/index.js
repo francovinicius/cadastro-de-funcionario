@@ -1,11 +1,13 @@
 import Botao from '../Botao';
 import CampoTexto from '../CampoTexto';
 import ListaSuspensa from '../ListaSuspensa';
+import { useState } from 'react';
 import './Formulario.css'
 
 const Formulario = () => {
-
+    //array time
     const times = [
+            'Selecione o cargo',
             'Gerente',
             'Programador',
             'Líder de equipe',
@@ -14,11 +16,19 @@ const Formulario = () => {
             'Assistente de rastreamento',
             'Motorista'
     ]
+
+    //
+    const [nome, setNome] = useState('')
+    const [empresa, setEmpresa] = useState('')
+    const [imagem, setImagem] = useState('')
+    const [time, setTime] = useState('')
+
+
         //função para o submit
     const aoSalvar = (evento) => {
 
         evento.preventDefault ()
-        console.log('certo')
+        console.log('Form subimetido a => ', nome, empresa, imagem, time)
     }
 
     return (
@@ -28,10 +38,34 @@ const Formulario = () => {
 
             <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <CampoTexto obrigatorio = {true} label="Nome" placeholder = "Digite o nome"/>
-                <CampoTexto obrigatorio = {true} label="Empresa" placeholder = "Digite a empresa contratante"/>
-                <CampoTexto obrigatorio = {true} label="Imagem" placeholder = "Digite o endereço da imagem"/>
-                <ListaSuspensa obrigatorio = {true} label="Cargos" itens={times} />
+                <CampoTexto 
+                    obrigatorio = {true} 
+                    label="Nome" 
+                    placeholder = "Digite o nome"
+                    valor={nome}
+                    aoAlterado={valor => setNome(valor)}
+                />
+                <CampoTexto 
+                    obrigatorio = {true} 
+                    label="Empresa" 
+                    placeholder = "Digite a em presa contratante"
+                    valor={empresa}
+                    aoAlterado={valor => setEmpresa(valor)}
+                />
+                <CampoTexto 
+                    obrigatorio = {true} 
+                    label="Imagem" 
+                    placeholder = "Digite o endereço da imagem"
+                    valor={imagem}
+                    aoAlterado={valor => setImagem(valor)}
+                />
+                <ListaSuspensa 
+                    obrigatorio = {true} 
+                    label="Cargo" 
+                    itens={times} 
+                    valor={time}
+                    aoAlterado={valor => setTime(valor)}
+                />
                 <Botao>
                     Criar Card
                 </Botao>
