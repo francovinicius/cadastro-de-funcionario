@@ -11,36 +11,42 @@ function App() {
       nome: 'Gerente',
       corPrimaria: '#57c278',
       corSecundaria: '#d9f7e9',
-    }
+    },
+
     {
-      nome: 'Front-End',
+      nome: 'Programador',
       corPrimaria: '#82CFFA',
       corSecundaria: '#E8F8FF',
-    }
+    },
+
     {
-      nome: 'Data Sciense',
+      nome: 'Lider de equipe',
       corPrimaria: '#A6D157',
       corSecundaria: '#F0F8E2',
-    }
+    },
+    
     {
-      nome: 'Devops',
-      corPrimaria: '#E06B69
-      corSecundaria: '#FDE7E8
-    }
+      nome: 'Aux administrativo',
+      corPrimaria: '#E06B69',
+      corSecundaria: '#FDE7E8',
+    },
+
     {
-      nome: 'UX e Design',
+      nome: 'Aux de Serviços gerais',
       corPrimaria: '#D86EBF',
-      corSecundaria: '#FAE95F5',
-    }
+      corSecundaria: '#f8d5e4',
+    },
+
     {
-      nome: 'Mobile',
+      nome: 'Assistente de rastreamento',
       corPrimaria: '#FEBA05',
-      corSecundaria: '#FFF5D9',
-    }
+      corSecundaria: '#FFF5c8',
+    },
+
     {
-      nome: 'Inovação e Gestão',
+      nome: 'Motorista',
       corPrimaria: '#FF8A29',
-      corSecundaria: '#FFEEDF',
+      corSecundaria: '#f7dfcb',
     }
   ]
 
@@ -56,13 +62,8 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
-      <Time nome="Gerente"/>
-      <Time nome="Programador"/>
-      <Time nome="Lider de equipe"/>
-      <Time nome="Aux administrativo"/>
-      <Time nome="Aux de Serviços gerais"/>
-      <Time nome="Assistente de rastreamento"/>
-      <Time nome="Motorista"/>
+      
+      {times.map(time => <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} /> )}
     </div>
   );
 }
