@@ -1,15 +1,9 @@
 import './Botao.css'
 
-
 const Botao = (props) => {
+    return (<button className='botao'>
+        {props.children}
+    </button>)
+}
 
-    //props.children para poder receber tanto icones como imagens e textos
-    
-    return (
-        <button className='botao'>
-            {props.children}
-        </button>
-    )
-};
-
-export default Botao;
+export default Botao

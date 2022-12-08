@@ -6,10 +6,10 @@
     padding: 32px;
     border: none;
     cursor: pointer;
-    color: #fff;
+    color: #FFF;
     margin: 32px 0;
 }
 
 .botao:hover {
-    color: #95ffd4;
+    color: #95FFD4;
 }

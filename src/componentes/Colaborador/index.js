@@ -1,17 +1,15 @@
 import './Colaborador.css'
 
-const Colaborador = () => {
-    return (
-        <div className='colaborador'>
-            <div>
-                <img src='https://github.com/francovinicius.png' alt='' />
-            </div>
-            <div className='rodape'>
-                <h4>Vinicius</h4>
-                <h5>Programador</h5>
-            </div>
+const Colaborador = ({ nome, imagem, cargo, corDeFundo }) => {
+    return (<div className='colaborador'>
+        <div className='cabecalho' style={{ backgroundColor: corDeFundo }}>
+            <img src={imagem} alt={nome}/>
         </div>
-    )
+        <div className='rodape'>
+            <h4>{nome}</h4>
+            <h5>{cargo}</h5>
+        </div>
+    </div>)
 }
 
 export default Colaborador
