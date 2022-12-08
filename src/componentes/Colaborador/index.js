@@ -2,11 +2,11 @@ import './Colaborador.css'
 
 const Colaborador = () => {
     return (
-        <div>
+        <div className='colaborador'>
             <div>
                 <img src='https://github.com/francovinicius.png' alt='' />
             </div>
-            <div>
+            <div className='rodape'>
                 <h4>Vinicius</h4>
                 <h5>Programador</h5>
             </div>
