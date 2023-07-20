@@ -16,20 +16,19 @@ Este projeto visa a criação de cards dos funcionários separando-os por empres
 - Filtro por nome e cargo
 - Ordenação por nome e cargo
 
-## Como executar o projeto
+## Instruções de Uso
 
-1. Clone o repositório para o seu computador.
-2. Abra o terminal e navegue até a pasta raiz do projeto.
-3. Execute o comando `npm install` para instalar as dependências.
-4. Execute o comando `npm start` para iniciar a aplicação.
-5. Abra o seu navegador e acesse o endereço `http://localhost:3000`.
+1. Faça o clone do repositório para sua máquina local.
+2. Certifique-se de ter o Node.js instalado.
+3. No diretório raiz do projeto, execute o seguinte comando para instalar as dependências: 
+4. Após a instalação das dependências, execute o seguinte comando para iniciar o servidor de desenvolvimento:
+5. Abra o navegador e acesse [http://localhost:3000](http://localhost:3000) para visualizar a aplicação.
 
-## Contribuindo
+## Saber Mais
 
-Se você quiser contribuir com este projeto, siga estas etapas:
+Para saber mais sobre o React e suas funcionalidades, consulte a [documentação oficial do React](https://reactjs.org/).<br>
+Para aprender mais sobre o uso do useEffect e useState, confira a [documentação do React Hooks](https://reactjs.org/docs/hooks-intro.html).
 
-1. Faça um fork deste repositório.
-2. Crie um branch para suas alterações: `git checkout -b minha-nova-funcionalidade`
-3. Faça suas alterações e confirme-as: `git commit -m 'Adicionar nova funcionalidade'`
-4. Envie para o branch original: `git push origin minha-nova-funcionalidade`
-5. Crie uma solicitação de pull.
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests com melhorias, correções de bugs ou novas funcionalidades.
